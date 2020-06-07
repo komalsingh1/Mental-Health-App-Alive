@@ -49,13 +49,17 @@ A self assessment test carefully created in the beginning will lead you through 
 [![Watch the video](https://github.com/Code-and-Response/Liquid-Prep/blob/master/images/IBM-interview-video-image.png)](https://youtu.be/vOgCOoy_Bx0)
 
 ## The architecture
-
+Recommendation System Architecture
 ![Video transcription/translation app](https://github.com/komalsingh1/Mental-Health-App-Alive/blob/master/Recommend.png)
 
+Chatbot Architecture
 
-(https://github.com/komalsingh1/Mental-Health-App-Alive/blob/master/chatbot.png)
+![Video transcription/translation app](https://github.com/komalsingh1/Mental-Health-App-Alive/blob/master/chatbot.png)
 
-(https://github.com/komalsingh1/Mental-Health-App-Alive/blob/master/stress.png)
+
+Stress Management Architecture
+
+![Video transcription/translation app](https://github.com/komalsingh1/Mental-Health-App-Alive/blob/master/stress.png)
 
 
 
