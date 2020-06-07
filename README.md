@@ -9,13 +9,7 @@ A solution for all the Mental Illness
 
 
 # Submission name
-
-[![License](https://img.shields.io/badge/License-Apache2-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0) [![Slack](https://img.shields.io/badge/Join-Slack-blue)](https://callforcode.org/slack) [![Website](https://img.shields.io/badge/View-Website-blue)](https://code-and-response.github.io/Project-Sample/)
-
-A basic GitHub repository example for Call for Code submissions and those projects that join the Code and Response initiative. Not all sections or files are required. You can make this as simple or as in-depth as you need.
-
-*Read this in other languages: [English](README.md), [한국어](README.ko.md), [português](README.pt_br.md).*
-
+Team Name: SheCoders
 ## Contents
 
 1. [Short description](#short-description)
@@ -56,13 +50,18 @@ A self assessment test carefully created in the beginning will lead you through 
 
 ## The architecture
 
-![Video transcription/translation app](https://developer.ibm.com/developer/tutorials/cfc-starter-kit-speech-to-text-app-example/images/cfc-covid19-remote-education-diagram-2.png)
+![Video transcription/translation app](https://github.com/komalsingh1/Mental-Health-App-Alive/blob/master/Recommend.png)
+
+
+(https://github.com/komalsingh1/Mental-Health-App-Alive/blob/master/chatbot.png)
+
+(https://github.com/komalsingh1/Mental-Health-App-Alive/blob/master/stress.png)
 
 
 
 ## Long description
 
-[More detail is available here](DESCRIPTION.md)
+[More detail is available here](https://github.com/komalsingh1/Mental-Health-App-Alive/blob/master/MentalHealthApp.pptx)
 
 ## Project roadmap
 
@@ -148,16 +147,8 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/Code-and-Response/Project-Sample/graphs/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the Apache 2 License - see the [LICENSE](LICENSE) file for details
-
-## Acknowledgments
-
-* Based on [Billie Thompson's README template](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2).
-
+[Dipika Mandal](https://github.com/dipika732139)
+[Prity Agarwal](https://github.com/prity)
+[Sakshi Tripathi](https://github.com/skshtripathi)
+[Komal Singh](https://github.com/komalsingh1)
 
