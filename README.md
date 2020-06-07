@@ -40,7 +40,7 @@ A self assessment test carefully created in the beginning will lead you through 
 
 ## Demo video
 
-[![Watch the video](https://github.com/Code-and-Response/Liquid-Prep/blob/master/images/IBM-interview-video-image.png)](https://youtu.be/vOgCOoy_Bx0)
+[![Watch the video]()](https://youtu.be/g00M9xdx9vk)
 
 ## The architecture
 Recommendation System Architecture
