@@ -1,0 +1,146 @@
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montaga&display=swap" rel="stylesheet">
+    </head>
+
+
+    <body>
+      <audio autoplay *ngIf="isMusicOn">
+        <source src="../../assets/owlcity.mp3" type="audio/mpeg">
+      </audio>
+      <header class="v-header container">
+        <div class="fullscreen-video-wrap">
+          <video src="../../assets/images/videobg1.mov" autoplay="" loop=""></video>
+        </div>
+        <div class="header-overlay"></div>
+
+        <!--first view on the page-->
+        <div *ngIf = "div1" class="header-content text-md-center">
+        <h1>Welcome Friend!</h1>
+        <br>
+        <p>Just wanted to remind you that you are stronger than your troubles and braver than your fears! You're beautiful and complete... in your own way.</p>
+        <button mat-button class="btn" (click)="showVideosTransition()">Come along with me.</button>
+        <br>  
+          <br>  
+          <button mat-button (click)="toggleMusic()" color="success" *ngIf="isMusicOn">Stop Music</button>
+          <button mat-button (click)="toggleMusic()" color="success" *ngIf="!isMusicOn">Play Music</button>
+        </div>
+      
+   
+        <!--transition before stress videos section-->
+        <div *ngIf = "transition2show" class="header-content" style="width: 90%;height:90%;">
+          <div class="leftside">
+          <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+            <div class="flipper">
+              <div class="front">
+                <mat-card style="background-color: khaki;">
+                      <img mat-card-image src="../../assets/images/meditation.jpg"/>	
+                      <p class="fontStyle">I'm telling you homie..<br>Don't let your mind play wih you!</p>
+                    </mat-card>
+                  </div>
+                  <div class="back">
+                    <mat-card style="background-color: khaki; border-style: dotted;">
+                    <h1 class="fontStyle">Peace of Mind</h1>
+                    <br>
+                    <h2 class="fontStyle_small"> Our mind has so much power that it is capable of thinking the unthinkable, perceiving the unperceivable and doing 
+                      the impossible. Our mind can do wonders! But if you don't pay attention to how it works, it will 
+                      travel to far away lands and you'll lose your focus. And so...a peaceful mind is the first gift you must give to your self.The question is homie... 
+                      Are you present..mentally and not just physically? Or is your mind wandering ? The first step to tackle all problems is to change your perception 
+                      about the problems and be able to focus whenever you want and however you wish on them..and that homie.. is only possibile for a peaceful mind..
+                      Calm down.. listen.. pay attention to your mind..and it won't be long.. before you'll be doing wonders...
+                    </h2>
+                    </mat-card>
+                  </div>
+                </div>
+              </div> 
+            </div>
+              <div class="rightside">
+                <img mat-card-image src="../../assets/images/meditationgif.gif"/>	
+                <button mat-button class="btn" (click)="showWorkoutTransition()">Proceed</button>
+              </div>
+        </div>
+
+    <!--transition before Workouts section-->
+    <div *ngIf = "transition3show" class="header-content text-md-center" style="width: 90%;height:90%;">
+        <div class="leftside">
+        <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+            <div class="flipper">
+            <div class="front">
+                <mat-card style="background-color: khaki;">
+                    <img mat-card-image src="../../assets/images/dreams.jpg"/>	
+                    <p class="fontStyle">Run this extra mile homie..<br>And you'll find lesser crowd there!</p>
+                </mat-card>
+                </div>
+                <div class="back">
+                <mat-card style="background-color: khaki; border-style: dotted;">
+                <h1 class="fontStyle">Commitment</h1>
+                <br>
+                <h2 class="fontStyle_small">You are only are powerful as you believe. Self discipline is the greatest form 
+                    of self love my friend. And the one who is not capable of loving himself can never love anyone else. It takes a big leap of faith and 
+                    a commitment mightier than the mountains. It takes the will to wake up a little early to save one more minute for your workout. Because to 
+                    live, you need this body to be healthy my friend. From what you do to what you achieve, the body is your armour. Its all you really have. 
+                    So pick yourself up homie... Tie your shoelaces and be ready to hear your heart beat.. Your journey begins only when you take this first step..
+                    And there are miles and miles ahead.. all worthy of being measured day by day.. 
+                </h2>
+                </mat-card>
+
+                </div>
+            </div>
+            </div> 
+        </div>
+        <div class="rightside">
+          <br><br>
+          <img mat-card-image src="../../assets/images/workoutgif.gif"/>
+        <button mat-button class="btn" (click)="showVideos()">Proceed</button>
+      </div>
+  </div>
+
+        <!--Videos section-->
+        <div *ngIf = "videos" class="header-content text-md-center" style="width: 97%;height:90%;">
+            <p>meditations and Affirmations.. for a peaceful mind</p>
+            <div  class="layout" fxLayout="row wrap" fxLayout.lt-sm="column" fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="flex-start">
+              <iframe width="24%" height="40%" src="https://www.youtube.com/embed/aIIEI33EUqI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <iframe width="24%" height="40%" src="https://www.youtube.com/embed/LXK3sphcbAQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <iframe width="24%" height="40%" src="https://www.youtube.com/embed/Lju6h-C37hE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <iframe width="24%" height="40%" src="https://www.youtube.com/embed/0CYm6Gj_Qmw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+             </div> <br>
+            <div  class="layout" fxLayout="row wrap" fxLayout.lt-sm="column" fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="flex-start">
+              <iframe width="24%" height="40%" src="https://www.youtube.com/embed/hKqjSiM38uM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <iframe width="24%" height="40%" src="https://www.youtube.com/embed/GnWlERK0UJc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <iframe width="24%" height="40%" src="https://www.youtube.com/embed/6sKs6qhY-_4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <iframe width="24%" height="40%" src="https://www.youtube.com/embed/OkiFtjVVO6g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div><br>
+            <div  class="layout" fxLayout="row wrap" fxLayout.lt-sm="column" fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="flex-start">          
+              <iframe width="24%" height="40%" src="https://www.youtube.com/embed/6p_yaNFSYao" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <iframe width="24%" height="40%" src="https://www.youtube.com/embed/Jyy0ra2WcQQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <iframe width="24%" height="40%" src="https://www.youtube.com/embed/F2iYcyJ9mU4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <iframe width="24%" height="40%" src="https://www.youtube.com/embed/DIY0FZWin7g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+             </div><br>
+             <p>Workout Videos for a healthy body..</p>
+                <div  class="layout" fxLayout="row wrap" fxLayout.lt-sm="column" fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="flex-start">
+                  <iframe width="24%" height="40%" src="https://www.youtube.com/embed/VHyGqsPOUHs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <iframe width="24%" height="40%" src="https://www.youtube.com/embed/cVRnZa3_ing" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <iframe width="24%" height="40%" src="https://www.youtube.com/embed/4gdL-I6rhFg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <iframe width="24%" height="40%" src="https://www.youtube.com/embed/_vEgwLEFJXU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                 </div> <br>
+                <div  class="layout" fxLayout="row wrap" fxLayout.lt-sm="column" fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="flex-start">
+                  <iframe width="24%" height="40%" src="https://www.youtube.com/embed/o5soep1e8Ik" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <iframe width="24%" height="40%" src="https://www.youtube.com/embed/X3q5e1pV4pc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <iframe width="24%" height="40%" src="https://www.youtube.com/embed/XCIviBT3Txc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <iframe width="24%" height="40%" src="https://www.youtube.com/embed/lJi17P7iKNM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div><br>
+                <div  class="layout" fxLayout="row wrap" fxLayout.lt-sm="column" fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="flex-start">          
+                  <iframe width="24%" height="40%" src="https://www.youtube.com/embed/NcD_hIUDXFU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <iframe width="24%" height="40%" src="https://www.youtube.com/embed/NCJeh1pk1no" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <iframe width="24%" height="40%" src="https://www.youtube.com/embed/yN3GgCUmmXw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <iframe width="24%" height="40%" src="https://www.youtube.com/embed/DkzUzrp2vVo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                 </div><br>
+        </div>
+    </header>
+  </body>
+</html>

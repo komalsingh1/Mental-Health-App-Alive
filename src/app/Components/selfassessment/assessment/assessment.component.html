@@ -1,0 +1,20 @@
+<div class="header-content text-md-center">
+
+    <div class="header-content text-md-center " *ngIf="displaymain">
+        <p>{{displayTitle}} test</p>
+        <button mat-button class="btn" color="success" style="float: left" (click)="StartTest()">Take test</button>
+        <button mat-button class="btn" color="success" style="float: right" (click)="OnClose()">Close</button>
+    </div>
+    <div *ngIf="displayQuestion" class="header-content text-md-center">
+    <app-question [question]="question" [options]="options" *ngIf="hasQuestion" (optionEvent)="SelectedOptionHandler($event)"></app-question>
+    <div *ngIf="!hasQuestion" > No more questions</div>
+    <br>
+    <button mat-button class="btn" color="success" style="float: left" (click)="EndTest()">End Test</button>
+    <button mat-button  class="btn" color="success" style="float: right" *ngIf="hasQuestion" (click)="SubmitAndNextQuestion()">Submit</button>
+    </div>
+    <div *ngIf="displayResult" class="header-content text-md-center">
+    <app-result [moodImageUrl]="moodImageUrl" [score]="score" [description]="description" [summary]="summary"></app-result>
+    <br>
+    <button mat-button class="btn" color="success" style="float: center" (click)="OnClose()">Close</button>
+    </div>
+</div>

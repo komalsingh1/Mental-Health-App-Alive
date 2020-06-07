@@ -1,0 +1,25 @@
+.mat-toolbar-row{
+ background-color: black !important;
+ font-family: Georgia, 'Times New Roman', Times, serif !important;
+ color: white !important;
+}
+
+.mat-drawer{
+ background-color: black !important;
+} 
+.dot{
+    color:cyan;
+}
+
+#sidenav{
+    color:white important!;
+}
+
+.titlefontstyle, .mat-list-item-content{
+    font-family: "Brush Script MT" !important;
+    size:"10px";
+    color:white;
+    font-style: bold;
+}
+
+

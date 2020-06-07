@@ -1,0 +1,9 @@
+<div  class="header-content text-md-center">
+    <p>{{question}}</p>
+        <ul style="list-style: none;">
+            <li *ngFor ="let option of options">
+                <input type="radio" name="option" value="{{option.number}}" [(ngModel)]="optionNumber" (change)="OptionCanged()"> {{option.name}}
+            </li>
+        </ul>
+
+</div>

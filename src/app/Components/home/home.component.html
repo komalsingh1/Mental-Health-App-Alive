@@ -1,0 +1,27 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montaga&display=swap" rel="stylesheet">
+</head>
+    <body>
+      <audio autoplay *ngIf="isMusicOn">
+        <source src="../../assets/owlcity.mp3" type="audio/mpeg">
+      </audio>
+      <header class="v-header container">
+        <div class="fullscreen-video-wrap">
+          <video src="../../assets/images/videobg1.mov" autoplay="" loop=""></video>
+        
+    </div>
+    <div class="header-overlay"></div>
+    <div class="header-content text-md-center">
+      <h1 class="fstyle" >Hi Homo Sapien!</h1>
+      <br>
+      <p >I'm Alive. I just wanted to know how are you feeling buddy? Alive? Tired? Or just in a mess?!.. Do you want to spend sometime with me buddy!</p>
+      <button mat-button class="btn" routerLink="/selfassessment">Take me away</button>
+    </div>
+  </header>
+</body>
+    </html>

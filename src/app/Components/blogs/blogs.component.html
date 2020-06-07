@@ -1,0 +1,94 @@
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montaga&display=swap" rel="stylesheet">
+    </head>
+
+
+    <body>
+      <audio autoplay *ngIf="isMusicOn">
+        <source src="../../assets/owlcity.mp3" type="audio/mpeg">
+      </audio>
+      <header class="v-header container">
+        <div class="fullscreen-video-wrap">
+          <video src="../../assets/images/videobg1.mov" autoplay="" loop=""></video>
+        </div>
+        <div class="header-overlay"></div>
+
+        <!--first view on the page-->
+        <div *ngIf = "div1" class="header-content text-md-center">
+          <h1>Reading adds years to life!</h1>
+          <br>
+          <p>This one is just to inspire you and let you see that you're not alone. Many of us are in trouble together homie.. Lets 
+            read each other's side of stories... And know.. that we will all emerge out stronger.. wiser and brighter..
+          </p>
+          <button mat-button class="btn" (click)="showBooksTransition()">Come along with me.</button>
+          <br>  
+          <br>  
+          <button mat-button (click)="toggleMusic()" color="success" *ngIf="isMusicOn">Stop Music</button>
+          <button mat-button (click)="toggleMusic()" color="success" *ngIf="!isMusicOn">Play Music</button>
+        </div>
+
+        <!--transition before books section-->
+        <div *ngIf = "transition4show" class="header-content text-md-center" style="width: 90%;height:90%">
+          <div class="leftside">
+            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+              <div class="flipper">
+                <div class="front">
+                  <mat-card style="background-color: khaki;">
+                         <img mat-card-image src="../../assets/images/reading.jpg"/>	
+                         <p class="fontStyle">I'm telling you homie..<br>Reading adds years to life!</p>
+                        </mat-card>
+                      </div>
+                      <div class="back">
+                        <mat-card style="background-color: khaki; border-style: dotted;">
+                        <h1 class="fontStyle">Reading</h1>
+                        <br>
+                        <h2 class="fontStyle_small">Reading gives us the extra insight over the pre formed notions we have made over the time in our lives... They 
+                          say that readers are leaders. Diving into an ocean of stories and blogs we gradually develop the irreplaceable quality of acceptance.. We 
+                          start understanding what is said between the lines. The world starts becoming smaller for us, because only then do we realise
+                          in true essence that everyone else is nothing but another reflection of us. We are all connected by emotions of love and affinity at our cores..
+                          Reading empowers us with knowledge and wisdom and in the light of knowledge my friend, you can never walk on the wrong path... Are you willing 
+                          to dive in this ocean? 
+                        </h2>
+                        </mat-card>
+        
+                      </div>
+                    </div>
+                  </div> 
+                </div>
+                  <div class="rightside">
+                    <br><br>
+                    <img mat-card-image src="../../assets/images/readinggif.gif"/>
+              <button mat-button class="btn" (click)="showBooks()">Yes I am!</button>
+            </div>
+        </div>
+
+        <!--Books section-->
+        <div *ngIf = "books" class="header-content text-md-center" style="width: 98%;height:95%">
+          <div  class="layout" fxLayout="row wrap" fxLayout.lt-sm="column" fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="flex-start">
+            <mat-card class="cardstyle" style="background-color:khaki ;height:50%;width:30%" class="card-picture" *ngFor="let picture of pictures">
+              <mat-card-title fxLayout.gt-xs="row" fxLayout.xs="column">
+              <span fxFlex="80%"  style="font-family: 'Dancing Script', cursive ; font-size:xx-large; font-weight:bolder">{{picture.title}}</span>
+              </mat-card-title>
+              <img mat-card-image src="{{picture.img}}">
+              <mat-card-content style="padding:0px;">
+                <p  style="font-family: 'Montaga', serif; font-size:medium;">
+                  {{picture.msg}}
+                </p>
+              </mat-card-content>
+              <mat-card-actions style="padding:0px;">
+                <button mat-button>LIKE</button>
+                <button mat-button>SHARE</button>
+              </mat-card-actions>
+            </mat-card>
+          </div>
+        </div>
+
+    </header>
+  </body>
+</html>

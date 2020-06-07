@@ -1,0 +1,108 @@
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montaga&display=swap" rel="stylesheet">
+    </head>
+
+
+    <body>
+      <audio autoplay *ngIf="isMusicOn">
+        <source src="../../assets/owlcity.mp3" type="audio/mpeg">
+      </audio>
+      <header class="v-header container">
+        <div class="fullscreen-video-wrap">
+          <video src="../../assets/images/videobg1.mov" autoplay="" loop=""></video>
+        </div>
+        <div class="header-overlay"></div>
+
+        <!--first view on the page-->
+        <div *ngIf = "div1" class="header-content text-md-center">
+          <h1>Hello Amigo! What are you humming today?</h1>
+          <br>
+          <p>Life is one grand song.. So I thought why not start the music!</p>
+          <button mat-button class="btn" (click)="showMusicTransition()">Come along with me.</button>
+          <br>  
+          <br>  
+          <button mat-button (click)="toggleMusic()" color="success" *ngIf="isMusicOn">Stop Music</button>
+          <button mat-button (click)="toggleMusic()" color="success" *ngIf="!isMusicOn">Play Music</button>
+        </div>
+
+        <!--transition before music section-->
+        <div *ngIf = "transition5show" class="header-content text-md-center" style="width: 90%;height:90%">
+          <div class="leftside">
+            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+              <div class="flipper">
+                <div class="front">
+                  <mat-card style="background-color: khaki;">
+                      <img mat-card-image src="../../assets/images/musics.jpg"/>	
+                      <p class="fontStyle">Put your heart in music homie..<br>And it will keep you humming.</p>
+                    </mat-card>
+                  </div>
+                  <div class="back">
+                    <mat-card style="background-color: khaki; border-style: dotted;">
+                    <h1 class="fontStyle">Music</h1>
+                    <br>
+                    <h2 class="fontStyle_small">Nothing like walking on a shore with your earphones plugged! Music is your friend which is always feeling what 
+                      you do. Songs and lyrics fit your moods and problems and for once you fly away sitting on these tunes in past and future, smiling at memories,
+                      grinning at what it would be like to be the best version of yourself. So why not today too, make your heart light with gentle tunes and little 
+                      drama. Grab a coffee my friend. Close your eyes... Here you belong my friend.. to this song.. to this extraordinary moment.. Where you and I and this 
+                      music is .. ALIVE.
+                    </h2>
+                    </mat-card>
+    
+                  </div>
+                </div>
+              </div> 
+            </div>
+              <div class="rightside">
+                <img mat-card-image src="../../assets/images/musicgif.gif"/>
+              <button mat-button class="btn" (click)="showMusic()">Proceed</button>
+            </div>
+        </div>
+
+        <!--music section-->
+        <div *ngIf = "music" class="header-content text-md-center" style="width: 98%;height:95%">
+          <div  class="layout" fxLayout="row wrap" fxLayout.lt-sm="column" fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="flex-start">
+            <iframe width="24%" height="40%" src="https://www.youtube.com/embed/QYY4KfG3mtA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="24%" height="40%" src="https://www.youtube.com/embed/mfCca7M5r9A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="24%" height="40%" src="https://www.youtube.com/embed/psuRGfAaju4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="24%" height="40%" src="https://www.youtube.com/embed/pIz2K3ArrWk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+           </div> <br>
+          <div  class="layout" fxLayout="row wrap" fxLayout.lt-sm="column" fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="flex-start">
+            <iframe width="24%" height="40%" src="https://www.youtube.com/embed/UjnDpcgJXvA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="24%" height="40%" src="https://www.youtube.com/embed/elsh3J5lJ6g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="24%" height="40%" src="https://www.youtube.com/embed/2Rd2FYeA-Q0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="24%" height="40%" src="https://www.youtube.com/embed/HbSvs8VZStE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div><br>
+          <div  class="layout" fxLayout="row wrap" fxLayout.lt-sm="column" fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="flex-start">          
+            <iframe width="24%" height="40%" src="https://www.youtube.com/embed/w5LGdqQAChs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="24%" height="40%" src="https://www.youtube.com/embed/2EXysr5NRiE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="24%" height="40%" src="https://www.youtube.com/embed/aeEixPG0exA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="24%" height="40%" src="https://www.youtube.com/embed/QoitiIbdeaM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+           </div><br>
+           <div  class="layout" fxLayout="row wrap" fxLayout.lt-sm="column" fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="flex-start">
+            <iframe width="24%" height="40%" src="https://www.youtube.com/embed/QYY4KfG3mtA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="24%" height="40%" src="https://www.youtube.com/embed/mfCca7M5r9A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="24%" height="40%" src="https://www.youtube.com/embed/psuRGfAaju4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="24%" height="40%" src="https://www.youtube.com/embed/pIz2K3ArrWk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+           </div> <br>
+          <div  class="layout" fxLayout="row wrap" fxLayout.lt-sm="column" fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="flex-start">
+            <iframe width="24%" height="40%" src="https://www.youtube.com/embed/UjnDpcgJXvA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="24%" height="40%" src="https://www.youtube.com/embed/elsh3J5lJ6g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="24%" height="40%" src="https://www.youtube.com/embed/2Rd2FYeA-Q0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="24%" height="40%" src="https://www.youtube.com/embed/HbSvs8VZStE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div><br>
+          <div  class="layout" fxLayout="row wrap" fxLayout.lt-sm="column" fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="flex-start">          
+            <iframe width="24%" height="40%" src="https://www.youtube.com/embed/w5LGdqQAChs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="24%" height="40%" src="https://www.youtube.com/embed/2EXysr5NRiE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="24%" height="40%" src="https://www.youtube.com/embed/aeEixPG0exA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="24%" height="40%" src="https://www.youtube.com/embed/QoitiIbdeaM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+           </div><br>
+        </div>
+    </header>
+  </body>
+</html>

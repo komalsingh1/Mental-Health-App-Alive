@@ -1,0 +1,493 @@
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montaga&display=swap" rel="stylesheet">
+    </head>
+
+
+    <body>
+      <audio autoplay *ngIf="isMusicOn">
+        <source src="../../assets/owlcity.mp3" type="audio/mpeg">
+      </audio>
+      <header class="v-header container">
+        <div class="fullscreen-video-wrap">
+          <video src="../../assets/images/videobg1.mov" autoplay="" loop=""></video>
+        </div>
+        <div class="header-overlay"></div>
+
+        <!--first view on the page-->
+        <div *ngIf = "div1" class="header-content text-md-center">
+          <h1>Welcome Friend!</h1>
+          <br>
+          <p>Just wanted to remind you that you are stronger than your troubles and braver than your fears! You're beautiful and complete... in your own way.</p>
+          <button mat-button class="btn" (click)="showSuggestionsTransition()">Come along with me.</button>    
+          <br>  
+          <br>  
+          <button mat-button (click)="toggleMusic()" color="success" *ngIf="isMusicOn">Stop Music</button>
+          <button mat-button (click)="toggleMusic()" color="success" *ngIf="!isMusicOn">Play Music</button>
+        </div>
+  
+        <!--transition before stress management choice-->
+        <div *ngIf = "transition1show" class="header-content text-md-center" style="width: 90%;height:90%;">
+          <div class="leftside">
+            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+              <div class="flipper">
+                <div class="front">
+                  <mat-card style="background-color: khaki;">
+                    <img mat-card-image src="../../assets/images/background.jpg"/>	
+                    <p class="fontStyle">I'm telling you homie..<br>Your heart knows the way!</p>
+                  </mat-card>
+                </div>
+                <div class="back">
+                  <mat-card style="background-color: khaki; border-style: dotted;">
+                  <h1 class="fontStyle">Challenges</h1>
+                  <br>
+                  <h2 class="fontStyle_small">We are all travellers homie. And all of us have different journeys.. Colors of love and freedom paint our soul.
+                    We're here to fly and experience and smile and shine... But not all the days can be the same right!? Dull days
+                    and sorrow nights are a part of our lives as much as the sun and the moon. But I need you to know something buddy..
+                    Keep walking... just don't stop walking.. Keep telling you're self that the sun is about to rise and you
+                    are going to rise with it this time... Your challenges aren't bigger than your commitment..
+                    Keep walking homie..You're not too far... You're almost there...
+                  </h2>
+                  </mat-card>
+
+                </div>
+              </div>
+            </div> 
+          </div>
+            <div class="rightside">
+              <br><br>
+              <img mat-card-image src="../../assets/images/positivegif1.gif"/>	
+              <button mat-button class="btn" (click)="showSuggestions()">Proceed</button>
+              <button mat-button class="btn" (click)="showHome()">Back</button>
+            </div>
+        </div>
+
+        <!--asking user for his stress management choice-->
+        <div *ngIf = "div2" class="header-content" style="width: 90%;height:90%;">
+        <div fxLayout="row wrap" fxLayoutGap="4%" fxLayoutAlign="flex-center">
+          <mat-card fxFlex="0 1 calc(28%)" style="width:28%;height:38vh" style="background-color:transparent">
+            <img mat-card-image src="../../assets/images/peace.png"/>	
+            <mat-card-actions>
+              <button mat-button class="btn1" (click)="showVideosTransition()">Need Peace</button>
+            </mat-card-actions>
+          </mat-card>
+          <mat-card fxFlex="0 1 calc(28%)" style="width:28%;height:38vh" style="background-color:transparent">
+            <img mat-card-image src="../../assets/images/inspire.png"/>	
+            <mat-card-actions>
+              <button mat-button class="btn1" (click)="showWorkoutTransition()">Need motivation</button>
+            </mat-card-actions>
+          </mat-card>
+          <mat-card fxFlex="0 1 calc(28%)" style="width:28%;height:38vh" style="background-color:transparent">
+            <img mat-card-image src="../../assets/images/music.png"/>	
+            <mat-card-actions>
+              <button mat-button class="btn1" (click)="showMusicTransition()">Need some music</button>
+            </mat-card-actions>
+          </mat-card>
+             
+        </div>
+
+        <br><br>
+
+        <div fxLayout="row wrap" fxLayoutGap="4%" fxLayoutAlign="flex-center">
+          <mat-card fxFlex="0 1 calc(28%)" style="width:28%;height:38vh" style="background-color:transparent">
+            <img mat-card-image src="../../assets/images/books.png"/>	
+            <mat-card-actions>
+              <button mat-button class="btn1" (click)="showBooksTransition()">Want to Read!</button>
+            </mat-card-actions>
+          </mat-card>
+          <mat-card fxFlex="0 1 calc(28%)" style="width:28%;height:38vh"  style="background-color:transparent">
+            <img mat-card-image src="../../assets/images/clock.png"/>	
+            <mat-card-actions>
+              <button mat-button class="btn1" (click)="showTodolistTransition()">Can't manage my time!</button>
+            </mat-card-actions>
+          </mat-card>  
+          <mat-card fxFlex="0 1 calc(28%)" style="width:28%;height:38vh"  style="background-color:transparent">
+            <img mat-card-image src="../../assets/images/talk.png"/>	
+            <mat-card-actions>
+              <button mat-button class="btn1" (click)="showChatTransition()">Talk to a friend!</button>
+            </mat-card-actions>
+          </mat-card>  
+            </div>
+        </div>
+  
+        <!--transition before stress videos section-->
+        <div *ngIf = "transition2show" class="header-content" style="width: 90%;height:90%;">
+          <div class="leftside">
+          <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+            <div class="flipper">
+              <div class="front">
+                <mat-card style="background-color: khaki;">
+                      <img mat-card-image src="../../assets/images/meditation.jpg"/>	
+                      <p class="fontStyle">I'm telling you homie..<br>Don't let your mind play wih you!</p>
+                    </mat-card>
+                  </div>
+                  <div class="back">
+                    <mat-card style="background-color: khaki; border-style: dotted;">
+                    <h1 class="fontStyle">Peace of Mind</h1>
+                    <br>
+                    <h2 class="fontStyle_small"> Our mind has so much power that it is capable of thinking the unthinkable, perceiving the unperceivable and doing 
+                      the impossible. Our mind can do wonders! But if you don't pay attention to how it works, it will 
+                      travel to far away lands and you'll lose your focus. And so...a peaceful mind is the first gift you must give to your self.The question is homie... 
+                      Are you present..mentally and not just physically? Or is your mind wandering ? The first step to tackle all problems is to change your perception 
+                      about the problems and be able to focus whenever you want and however you wish on them..and that homie.. is only possibile for a peaceful mind..
+                      Calm down.. listen.. pay attention to your mind..and it won't be long.. before you'll be doing wonders...
+                    </h2>
+                    </mat-card>
+                  </div>
+                </div>
+              </div> 
+            </div>
+              <div class="rightside">
+                <img mat-card-image src="../../assets/images/meditationgif.gif"/>	
+                <button mat-button class="btn" (click)="showVideos()">Proceed</button>
+                <br><br>
+                <button mat-button class="btn" (click)="showSuggestions()">Other Therapies</button>
+              </div>
+        </div>
+
+        <!--Videos section-->
+        <div *ngIf = "videos" class="header-content text-md-center" style="width: 97%;height:90%;">
+            <div  class="layout" fxLayout="row wrap" fxLayout.lt-sm="column" fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="flex-start">
+              <iframe width="24%" height="40%" src="https://www.youtube.com/embed/aIIEI33EUqI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <iframe width="24%" height="40%" src="https://www.youtube.com/embed/LXK3sphcbAQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <iframe width="24%" height="40%" src="https://www.youtube.com/embed/Lju6h-C37hE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <iframe width="24%" height="40%" src="https://www.youtube.com/embed/0CYm6Gj_Qmw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+             </div> <br>
+            <div  class="layout" fxLayout="row wrap" fxLayout.lt-sm="column" fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="flex-start">
+              <iframe width="24%" height="40%" src="https://www.youtube.com/embed/hKqjSiM38uM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <iframe width="24%" height="40%" src="https://www.youtube.com/embed/GnWlERK0UJc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <iframe width="24%" height="40%" src="https://www.youtube.com/embed/6sKs6qhY-_4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <iframe width="24%" height="40%" src="https://www.youtube.com/embed/OkiFtjVVO6g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div><br>
+            <div  class="layout" fxLayout="row wrap" fxLayout.lt-sm="column" fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="flex-start">          
+              <iframe width="24%" height="40%" src="https://www.youtube.com/embed/6p_yaNFSYao" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <iframe width="24%" height="40%" src="https://www.youtube.com/embed/Jyy0ra2WcQQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <iframe width="24%" height="40%" src="https://www.youtube.com/embed/F2iYcyJ9mU4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <iframe width="24%" height="40%" src="https://www.youtube.com/embed/DIY0FZWin7g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+             </div><br>
+             <div>
+              <button mat-button class="btn" (click)="showSuggestions()">Other Therapies</button>
+              <button mat-button class="btn" routerLink="/videos">Other Videos..</button>
+             </div>
+        </div>
+      
+        <!--transition before Workouts section-->
+        <div *ngIf = "transition3show" class="header-content text-md-center" style="width: 90%;height:90%;">
+          <div class="leftside">
+            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+              <div class="flipper">
+                <div class="front">
+                  <mat-card style="background-color: khaki;">
+                      <img mat-card-image src="../../assets/images/dreams.jpg"/>	
+                      <p class="fontStyle">Run this extra mile homie..<br>And you'll find lesser crowd there!</p>
+                    </mat-card>
+                  </div>
+                  <div class="back">
+                    <mat-card style="background-color: khaki; border-style: dotted;">
+                    <h1 class="fontStyle">Commitment</h1>
+                    <br>
+                    <h2 class="fontStyle_small">You are only are powerful as you believe. Self discipline is the greatest form 
+                      of self love my friend. And the one who is not capable of loving himself can never love anyone else. It takes a big leap of faith and 
+                      a commitment mightier than the mountains. It takes the will to wake up a little early to save one more minute for your workout. Because to 
+                      live, you need this body to be healthy my friend. From what you do to what you achieve, the body is your armour. Its all you really have. 
+                      So pick yourself up homie... Tie your shoelaces and be ready to hear your heart beat.. Your journey begins only when you take this first step..
+                      And there are miles and miles ahead.. all worthy of being measured day by day.. 
+                    </h2>
+                    </mat-card>
+    
+                  </div>
+                </div>
+              </div> 
+            </div>
+              <div class="rightside">
+                <br><br>
+                <img mat-card-image src="../../assets/images/workoutgif.gif"/>
+              <button mat-button class="btn" (click)="showWorkout()">Proceed</button>
+              <br><br>
+              <button mat-button class="btn" (click)="showSuggestions()">Other Therapies</button>
+            </div>
+        </div>
+
+        <!--workout section-->
+        <div *ngIf = "workout" class="header-content text-md-center">
+          <div  class="layout" fxLayout="row wrap" fxLayout.lt-sm="column" fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="flex-start">
+            <iframe width="24%" height="40%" src="https://www.youtube.com/embed/VHyGqsPOUHs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="24%" height="40%" src="https://www.youtube.com/embed/cVRnZa3_ing" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="24%" height="40%" src="https://www.youtube.com/embed/4gdL-I6rhFg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="24%" height="40%" src="https://www.youtube.com/embed/_vEgwLEFJXU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+           </div> <br>
+          <div  class="layout" fxLayout="row wrap" fxLayout.lt-sm="column" fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="flex-start">
+            <iframe width="24%" height="40%" src="https://www.youtube.com/embed/o5soep1e8Ik" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="24%" height="40%" src="https://www.youtube.com/embed/X3q5e1pV4pc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="24%" height="40%" src="https://www.youtube.com/embed/XCIviBT3Txc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="24%" height="40%" src="https://www.youtube.com/embed/lJi17P7iKNM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div><br>
+          <div  class="layout" fxLayout="row wrap" fxLayout.lt-sm="column" fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="flex-start">          
+            <iframe width="24%" height="40%" src="https://www.youtube.com/embed/NcD_hIUDXFU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="24%" height="40%" src="https://www.youtube.com/embed/NCJeh1pk1no" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="24%" height="40%" src="https://www.youtube.com/embed/yN3GgCUmmXw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="24%" height="40%" src="https://www.youtube.com/embed/DkzUzrp2vVo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+           </div><br>
+           <div>
+            <button mat-button class="btn" (click)="showSuggestions()">Other Therapies</button>
+            <button mat-button class="btn" routerLink="/videos">Other Videos..</button>
+           </div>
+        </div>
+
+
+        <!--transition before books section-->
+        <div *ngIf = "transition4show" class="header-content text-md-center" style="width: 90%;">
+          <div class="leftside">
+            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+              <div class="flipper">
+                <div class="front">
+                  <mat-card style="background-color: khaki;">
+                         <img mat-card-image src="../../assets/images/reading.jpg"/>	
+                         <p class="fontStyle">I'm telling you homie..<br>Reading adds years to life!</p>
+                        </mat-card>
+                      </div>
+                      <div class="back">
+                        <mat-card style="background-color: khaki; border-style: dotted;">
+                        <h1 class="fontStyle">Reading</h1>
+                        <br>
+                        <h2 class="fontStyle_small">Reading gives us the extra insight over the pre formed notions we have made over the time in our lives... They 
+                          say that readers are leaders. Diving into an ocean of stories and blogs we gradually develop the irreplaceable quality of acceptance.. We 
+                          start understanding what is said between the lines. The world starts becoming smaller for us, because only then do we realise
+                          in true essence that everyone else is nothing but another reflection of us. We are all connected by emotions of love and affinity at our cores..
+                          Reading empowers us with knowledge and wisdom and in the light of knowledge my friend, you can never walk on the wrong path... Are you willing 
+                          to dive in this ocean? 
+                        </h2>
+                        </mat-card>
+        
+                      </div>
+                    </div>
+                  </div> 
+                </div>
+                  <div class="rightside">
+                    <img mat-card-image src="../../assets/images/readinggif.gif"/>
+              <button mat-button class="btn" (click)="showBooks()">Yes I am!</button>
+              <br><br>
+              <button mat-button class="btn" (click)="showSuggestions()">Other Therapies</button>
+            </div>
+        </div>
+
+        <!--reading secetion-->
+        <div *ngIf = "books" class="header-content text-md-center" style="width: 98%;height:95%">
+          <div  class="layout" fxLayout="row wrap" fxLayout.lt-sm="column" fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="flex-start">
+            <mat-card class="cardstyle" style="background-color:khaki ;height:50%;width:30%" class="card-picture" *ngFor="let picture of pictures">
+              <mat-card-title fxLayout.gt-xs="row" fxLayout.xs="column">
+              <span fxFlex="80%"  style="font-family: 'Dancing Script', cursive ; font-size:xx-large; font-weight:bolder">{{picture.title}}</span>
+              </mat-card-title>
+              <img mat-card-image src="{{picture.img}}">
+              <mat-card-content style="padding:0px;">
+                <p  style="font-family: 'Montaga', serif; font-size:medium;">
+                  {{picture.msg}}
+                </p>
+              </mat-card-content>
+              <mat-card-actions style="padding:0px;">
+                <button mat-button>LIKE</button>
+                <button mat-button>SHARE</button>
+              </mat-card-actions>
+            </mat-card>
+          </div>
+          <div>
+            <button mat-button class="btn" (click)="showSuggestions()">Other Therapies</button>
+            <button mat-button class="btn" routerLink="/blogs">Other Blogs..</button>
+           </div>
+        </div>
+
+
+        <!--transition before music section-->
+        <div *ngIf = "transition5show" class="header-content text-md-center" style="width: 90%;">
+          <div class="leftside">
+            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+              <div class="flipper">
+                <div class="front">
+                  <mat-card style="background-color: khaki;">
+                      <img mat-card-image src="../../assets/images/musics.jpg"/>	
+                      <p class="fontStyle">Put your heart in music homie..<br>And it will keep you humming.</p>
+                    </mat-card>
+                  </div>
+                  <div class="back">
+                    <mat-card style="background-color: khaki; border-style: dotted;">
+                    <h1 class="fontStyle">Music</h1>
+                    <br>
+                    <h2 class="fontStyle_small">Nothing like walking on a shore with your earphones plugged! Music is your friend which is always feeling what 
+                      you do. Songs and lyrics fit your moods and problems and for once you fly away sitting on these tunes in past and future, smiling at memories,
+                      grinning at what it would be like to be the best version of yourself. So why not today too, make your heart light with gentle tunes and little 
+                      drama. Grab a coffee my friend. Close your eyes... Here you belong my friend.. to this song.. to this extraordinary moment.. Where you and I and this 
+                      music is .. ALIVE.
+                    </h2>
+                    </mat-card>
+    
+                  </div>
+                </div>
+              </div> 
+            </div>
+              <div class="rightside">
+                <img mat-card-image src="../../assets/images/musicgif.gif"/>
+              <button mat-button class="btn" (click)="showMusic()">Proceed</button>
+              <br><br>
+              <button mat-button class="btn" (click)="showSuggestions()">Other Therapies</button>
+            </div>
+        </div>
+
+        <!--music section-->
+        <div *ngIf = "music" class="header-content text-md-center">
+          <div  class="layout" fxLayout="row wrap" fxLayout.lt-sm="column" fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="flex-start">
+            <iframe width="24%" height="40%" src="https://www.youtube.com/embed/QYY4KfG3mtA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="24%" height="40%" src="https://www.youtube.com/embed/mfCca7M5r9A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="24%" height="40%" src="https://www.youtube.com/embed/psuRGfAaju4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="24%" height="40%" src="https://www.youtube.com/embed/pIz2K3ArrWk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+           </div> <br>
+          <div  class="layout" fxLayout="row wrap" fxLayout.lt-sm="column" fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="flex-start">
+            <iframe width="24%" height="40%" src="https://www.youtube.com/embed/UjnDpcgJXvA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="24%" height="40%" src="https://www.youtube.com/embed/elsh3J5lJ6g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="24%" height="40%" src="https://www.youtube.com/embed/2Rd2FYeA-Q0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="24%" height="40%" src="https://www.youtube.com/embed/HbSvs8VZStE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div><br>
+          <div  class="layout" fxLayout="row wrap" fxLayout.lt-sm="column" fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="flex-start">          
+            <iframe width="24%" height="40%" src="https://www.youtube.com/embed/w5LGdqQAChs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="24%" height="40%" src="https://www.youtube.com/embed/2EXysr5NRiE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="24%" height="40%" src="https://www.youtube.com/embed/aeEixPG0exA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="24%" height="40%" src="https://www.youtube.com/embed/QoitiIbdeaM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+           </div><br>
+           <div>
+            <button mat-button class="btn" (click)="showSuggestions()">Other Therapies</button>
+            <button mat-button class="btn" routerLink="/music">More songs..</button>
+           </div>
+        </div>
+
+
+
+        <!--transition before todolist section-->
+        <div *ngIf = "transition6show" class="header-content text-md-center" style="width: 90%;">
+          <div class="leftside">
+            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+              <div class="flipper">
+                <div class="front">
+                  <mat-card style="background-color: khaki;">
+                    <img mat-card-image src="../../assets/images/time.jpg"/>	
+                    <p class="fontStyle">Time is precious my friend..<br>Sieze this day!Carpe diem</p>
+                  </mat-card>
+                </div>
+                <div class="back">
+                  <mat-card style="background-color: khaki; border-style: dotted;">
+                  <h1 class="fontStyle">Time  Management</h1>
+                  <br>
+                  <h2 class="fontStyle_small"> Alexander the great said the time is inconquerable. It is more precious tha any other thing becausewe don't really
+                    know how much we still have. So in the limited time we have on this planet, what do you intend to do? You can spend all of it ranting and 
+                    blaming and telling everyone how miserable your life has become or step up and say okay!... I know there is a problem and nobody is going to 
+                    solve it other than me. In the little time you have, with all the courage in your heart, build a destiny my friend that the world remembers 
+                    you for. Leave behind you something that is precious, useful and humane. The world bows down to the ones who follow a discipline. And today,
+                    I want you take the first step homie. Would you want to make a to-do list?
+                  </h2>
+                  </mat-card>
+  
+                </div>
+              </div>
+            </div> 
+          </div>
+            <div class="rightside">
+              <img mat-card-image src="../../assets/images/timegif.gif"/>
+              <button mat-button class="btn" (click)="showTodolist()">Yes I want to!</button>
+              <br><br>
+              <button mat-button class="btn" (click)="showSuggestions()">Other Therapies</button>
+            </div>
+        </div>
+
+        <!--Todo list section-->
+        <div *ngIf = "todolist" class="header-content text-md-center">
+            <div class="todos">
+              <h1  class="fontStyle_white">
+                Lets Make Your Todo List
+              </h1> <br><br><br>
+                <div>
+                <form (submit)="addTodo($event)">
+                <input [(ngModel)]="newTodo" (keyup.enter)="newTodo=''" class="textfield" name="newTodo">
+                  <button class="btn1" type="submit" [disabled]="newTodo===''">Add Todo</button>
+                </form>
+                </div>
+          
+                <div [hidden]="newTodo">
+                  Type in a new todo...
+                </div>
+          
+                <div [hidden]="!newTodo">
+                  <!-- Another two-way binding example -->
+                  Typing: {{ newTodo }}
+                </div>
+          
+                <ul>
+                <li *ngFor="let todo of todos; let i=index">
+                  <input type="checkbox" class="checkbox" [(ngModel)]="todo.completed" />
+                <span [ngClass]="{'checked': todo.completed}">{{ todo.newTodo }} </span>
+                <span (click)="deleteTodo(i)" class="delete-icon">[X] </span>
+                  </li>
+                  </ul>
+          
+                  <div class="mtop20">
+                <button class="btn1" (click)="deleteSelectedTodos()">Delete Selected </button>
+                </div>
+            </div>
+        </div>
+
+
+        <!--transition before chatbot section-->
+        <div *ngIf = "transition7show" class="header-content text-md-center" style="width: 90%;">
+          <div class="leftside">
+            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+              <div class="flipper">
+                <div class="front">
+                  <mat-card style="background-color: khaki;">
+                         <img mat-card-image src="../../assets/images/talk.jpg"/>	
+                         <p class="fontStyle">Spill your heart out<br>Let me know your story..</p>
+                        </mat-card>
+                      </div>
+                      <div class="back">
+                        <mat-card style="background-color: khaki; border-style: dotted;">
+                        <h1 class="fontStyle">Importance of Conversation</h1>
+                        <br>
+                        <h2 class="fontStyle_small">Why do we talk dear friend? Why do we need it in the first place? Are we not self sufficient? Are we any less 
+                          than others? But we still want to talk! You see you often forget the words, but the wisdom in those words and the experience they brought
+                          with them when someone had first told them to you, remains alive. Just like I am alive.. Just like you are alive.. These experiences that 
+                          you cherish the most are here to live forever buddy.. Do you know why? Because the depth of a relation lies in the soul of those conversations
+                          that you have had with that person. Words can save us, or ditch us or teach us... but most important is that words can 'convey'. You cannot
+                          understand life without listening to someone else speak... That my friend is the imporance of conversations..
+                        </h2>
+                        </mat-card>
+        
+                      </div>
+                    </div>
+                  </div> 
+                </div>
+                  <div class="rightside">
+                    <img mat-card-image src="../../assets/images/positivegif1.gif"/>
+              <button mat-button class="btn" (click)="showChat()">Want to talk!?</button>
+              <br><br>
+              <button mat-button class="btn" (click)="showSuggestions()">Other Therapies</button>
+            </div>
+        </div>
+
+
+        <!--Chatbox section-->
+      <div *ngIf = "talk" class="header-content text-md-center" style="width: 90%;height:90%">
+        <div class="leftside">
+          <div style="width: 100%; height: 100%;margin-left: 10%">
+          <chat-dialog style="margin:10%;"></chat-dialog>   
+        </div>
+          <div class="rightside">
+            <img mat-card-image src="../../assets/images/positivegif1.gif"/>
+            <button mat-button class="btn" (click)="showSuggestions()">Other Therapies</button>
+           </div>        
+        </div>
+      </div>
+
+    </header>
+  </body>
+</html>

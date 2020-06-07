@@ -1,0 +1,49 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montaga&display=swap" rel="stylesheet">
+</head>
+    <body>
+      <audio autoplay *ngIf="isMusicOn">
+        <source src="../../assets/owlcity.mp3" type="audio/mpeg">
+      </audio>
+      <header class="v-header container">
+        <div class="fullscreen-video-wrap">
+          <video src="../../assets/images/videobg1.mov" autoplay="" loop=""></video>
+        
+    </div>
+    <div class="header-overlay"></div>
+    <div class="header-content text-md-center">
+      <div *ngIf="displayMain">
+        <h1>You are not alone</h1>
+        <br>
+        <p>Just because no one can heal or do your inner work for you , doesn't mean that you can, should, or need to do it alone</p>
+        <br>
+        <mat-card-actions>
+          <button mat-button class="btn" style="float: left" (click)="AnxietyTransition()">Take anxiety test</button>
+          <button mat-button class="btn" (click)="DepressionTransition()">Take depression test</button>
+          <button mat-button class="btn" style="float: right" (click)="StressTransition()">Take stress test</button>
+        </mat-card-actions>
+        <br>
+        <br>
+        <mat-card-actions>
+          <button mat-button class="btn ">Need a mood therapy?  Come along with me</button>
+        </mat-card-actions>
+        <br>  
+          <br>  
+          <button mat-button (click)="toggleMusic()" color="success" *ngIf="isMusicOn">Stop Music</button>
+          <button mat-button (click)="toggleMusic()" color="success" *ngIf="!isMusicOn">Play Music</button>
+      </div>
+      <div class="header-content text-md-center">
+        <app-assessment *ngIf="displayAnxiety" [testType]="testType" [displayTitle]="anxietyTestTitle" (close)="CloseAssesmmentHandler($event)"></app-assessment>
+        <app-assessment *ngIf="displayDepression" [testType]="testType" [displayTitle]="depressionTestTitle" (close)="CloseAssesmmentHandler($event)"></app-assessment>
+        <app-assessment *ngIf="displayStress" [testType]="testType" [displayTitle]="stressTestTitle" (close)="CloseAssesmmentHandler($event)"></app-assessment>
+      
+      </div>
+    </div>
+    </header>
+</body>
+    </html>
