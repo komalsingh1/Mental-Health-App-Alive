@@ -1,0 +1,312 @@
+[
+  {
+    "Number": 1,
+    "Question": "I feel agitated or restless (I pace, am unable to stay calm, or need to move constantly).",
+    "Options": [
+      {
+        "Number": 1,
+        "Option": "Strongly Disagree",
+        "Point": 1
+      },
+      {
+        "Number": 2,
+        "Option": "Disagree",
+        "Point": 2
+      },
+      {
+        "Number": 3,
+        "Option": "Neutral",
+        "Point": 3
+      },
+      {
+        "Number": 4,
+        "Option": "Agree",
+        "Point": 4
+      },
+      {
+        "Number": 5,
+        "Option": "Strongly Agree",
+        "Point": 5
+      }
+    ]
+  },
+  {
+    "Number": 2,
+    "Question": "I feel worn out",
+    "Options": [
+      {
+        "Number": 1,
+        "Option": "Strongly Disagree",
+        "Point": 1
+      },
+      {
+        "Number": 2,
+        "Option": "Disagree",
+        "Point": 2
+      },
+      {
+        "Number": 3,
+        "Option": "Neutral",
+        "Point": 3
+      },
+      {
+        "Number": 4,
+        "Option": "Agree",
+        "Point": 4
+      },
+      {
+        "Number": 5,
+        "Option": "Strongly Agree",
+        "Point": 5
+      }
+    ]
+  },
+  {
+    "Number": 3,
+    "Question": "I feel so guilty that I can barely take it",
+    "Options": [
+      {
+        "Number": 1,
+        "Option": "Strongly Disagree",
+        "Point": 1
+      },
+      {
+        "Number": 2,
+        "Option": "Disagree",
+        "Point": 2
+      },
+      {
+        "Number": 3,
+        "Option": "Neutral",
+        "Point": 3
+      },
+      {
+        "Number": 4,
+        "Option": "Agree",
+        "Point": 4
+      },
+      {
+        "Number": 5,
+        "Option": "Strongly Agree",
+        "Point": 5
+      }
+    ]
+  },
+  {
+    "Number": 4,
+    "Question": "When I wake up in the morning, I feel like there is nothing to look forward to",
+    "Options": [
+      {
+        "Number": 1,
+        "Option": "Strongly Disagree",
+        "Point": 1
+      },
+      {
+        "Number": 2,
+        "Option": "Disagree",
+        "Point": 2
+      },
+      {
+        "Number": 3,
+        "Option": "Neutral",
+        "Point": 3
+      },
+      {
+        "Number": 4,
+        "Option": "Agree",
+        "Point": 4
+      },
+      {
+        "Number": 5,
+        "Option": "Strongly Agree",
+        "Point": 5
+      }
+    ]
+  },
+  {
+    "Number": 5,
+    "Question": "I often feel that things are going my way",
+    "Options": [
+      {
+        "Number": 1,
+        "Option": "Strongly Disagree",
+        "Point": 1
+      },
+      {
+        "Number": 2,
+        "Option": "Disagree",
+        "Point": 2
+      },
+      {
+        "Number": 3,
+        "Option": "Neutral",
+        "Point": 3
+      },
+      {
+        "Number": 4,
+        "Option": "Agree",
+        "Point": 4
+      },
+      {
+        "Number": 5,
+        "Option": "Strongly Agree",
+        "Point": 5
+      }
+    ]
+  },
+  {
+    "Number": 6,
+    "Question": "I think about death",
+    "Options": [
+      {
+        "Number": 1,
+        "Option": "Strongly Disagree",
+        "Point": 1
+      },
+      {
+        "Number": 2,
+        "Option": "Disagree",
+        "Point": 2
+      },
+      {
+        "Number": 3,
+        "Option": "Neutral",
+        "Point": 3
+      },
+      {
+        "Number": 4,
+        "Option": "Agree",
+        "Point": 4
+      },
+      {
+        "Number": 5,
+        "Option": "Strongly Agree",
+        "Point": 5
+      }
+    ]
+  },
+  {
+    "Number": 7,
+    "Question": "I am able to control irritation in my life very often",
+    "Options": [
+      {
+        "Number": 1,
+        "Option": "Strongly Disagree",
+        "Point": 1
+      },
+      {
+        "Number": 2,
+        "Option": "Disagree",
+        "Point": 2
+      },
+      {
+        "Number": 3,
+        "Option": "Neutral",
+        "Point": 3
+      },
+      {
+        "Number": 4,
+        "Option": "Agree",
+        "Point": 4
+      },
+      {
+        "Number": 5,
+        "Option": "Strongly Agree",
+        "Point": 5
+      }
+    ]
+  },
+  {
+    "Number": 8,
+    "Question": "I get mad at myself if I do not achieve the goals I have set out to reach",
+    "Options": [
+      {
+        "Number": 1,
+        "Option": "Strongly Disagree",
+        "Point": 1
+      },
+      {
+        "Number": 2,
+        "Option": "Disagree",
+        "Point": 2
+      },
+      {
+        "Number": 3,
+        "Option": "Neutral",
+        "Point": 3
+      },
+      {
+        "Number": 4,
+        "Option": "Agree",
+        "Point": 4
+      },
+      {
+        "Number": 5,
+        "Option": "Strongly Agree",
+        "Point": 5
+      }
+    ]
+  },
+  {
+    "Number": 9,
+    "Question": "When something is bothering me, I cannot stop thinking about it",
+    "Options": [
+      {
+        "Number": 1,
+        "Option": "Strongly Disagree",
+        "Point": 1
+      },
+      {
+        "Number": 2,
+        "Option": "Disagree",
+        "Point": 2
+      },
+      {
+        "Number": 3,
+        "Option": "Neutral",
+        "Point": 3
+      },
+      {
+        "Number": 4,
+        "Option": "Agree",
+        "Point": 4
+      },
+      {
+        "Number": 5,
+        "Option": "Strongly Agree",
+        "Point": 5
+      }
+    ]
+  },
+  {
+    "Number": 10,
+    "Question": "I often feel that difficulties are piling up so high that i cannot overcome them",
+    "Options": [
+      {
+        "Number": 1,
+        "Option": "Strongly Disagree",
+        "Point": 1
+      },
+      {
+        "Number": 2,
+        "Option": "Disagree",
+        "Point": 2
+      },
+      {
+        "Number": 3,
+        "Option": "Neutral",
+        "Point": 3
+      },
+      {
+        "Number": 4,
+        "Option": "Agree",
+        "Point": 4
+      },
+      {
+        "Number": 5,
+        "Option": "Strongly Agree",
+        "Point": 5
+      }
+    ]
+  }
+]

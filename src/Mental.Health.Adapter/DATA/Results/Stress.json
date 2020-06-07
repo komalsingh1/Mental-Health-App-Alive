@@ -1,0 +1,32 @@
+[
+  {
+    "Score": 1,
+    "ImageUrl": "",
+    "Description": "No sign of stress",
+    "Summary": "Your answers suggest that you have no symptoms of stress. You are more like a free bird enjoying your life. keep smiling."
+  },
+  {
+    "Score": 2,
+    "ImageUrl": "",
+    "Description": "Very Slightly depressed",
+    "Summary": "Your answers suggest that you have very few of the same symptoms common in people suffering from stress. Since this quiz is not meant to replace a professional diagnosis, you should follow up with your doctor or a mental health worker for an assessment. "
+  },
+  {
+    "Score": 3,
+    "ImageUrl": "",
+    "Description": "Mild Indication of stress",
+    "Summary": "Your answers suggest that you have some of the same symptoms common in people suffering from stress. Since this quiz is not meant to replace a professional diagnosis, you should follow up with your doctor or a mental health worker for an assessment."
+  },
+  {
+    "Score": 4,
+    "ImageUrl": "",
+    "Description": "Moderate Indication of stress",
+    "Summary": "Your answers suggest that you have several of the same symptoms common in people suffering from stress. Since this quiz is not meant to replace a professional diagnosis, you should follow up with your doctor or a mental health worker for an assessment. "
+  },
+  {
+    "Score": 5,
+    "ImageUrl": "",
+    "Description": "High Indication of stress",
+    "Summary": "Your answers suggest that you have many of the same symptoms common in people suffering from stress. Since this quiz is not meant to replace a professional diagnosis, you should follow up with your doctor or a mental health worker for an assessment."
+  }
+]

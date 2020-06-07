@@ -1,0 +1,312 @@
+[
+  {
+    "Number": 1,
+    "Question": "I have a persistent feeling of emptiness",
+    "Options": [
+      {
+        "Number": 1,
+        "Option": "Strongly Disagree",
+        "Point": 1
+      },
+      {
+        "Number": 2,
+        "Option": "Disagree",
+        "Point": 2
+      },
+      {
+        "Number": 3,
+        "Option": "Neutral",
+        "Point": 3
+      },
+      {
+        "Number": 4,
+        "Option": "Agree",
+        "Point": 4
+      },
+      {
+        "Number": 5,
+        "Option": "Strongly Agree",
+        "Point": 5
+      }
+    ]
+  },
+  {
+    "Number": 2,
+    "Question": "I feel bad about myself",
+    "Options": [
+      {
+        "Number": 1,
+        "Option": "Strongly Disagree",
+        "Point": 1
+      },
+      {
+        "Number": 2,
+        "Option": "Disagree",
+        "Point": 2
+      },
+      {
+        "Number": 3,
+        "Option": "Neutral",
+        "Point": 3
+      },
+      {
+        "Number": 4,
+        "Option": "Agree",
+        "Point": 4
+      },
+      {
+        "Number": 5,
+        "Option": "Strongly Agree",
+        "Point": 5
+      }
+    ]
+  },
+  {
+    "Number": 3,
+    "Question": "I feel so guilty that I can barely take it",
+    "Options": [
+      {
+        "Number": 1,
+        "Option": "Strongly Disagree",
+        "Point": 1
+      },
+      {
+        "Number": 2,
+        "Option": "Disagree",
+        "Point": 2
+      },
+      {
+        "Number": 3,
+        "Option": "Neutral",
+        "Point": 3
+      },
+      {
+        "Number": 4,
+        "Option": "Agree",
+        "Point": 4
+      },
+      {
+        "Number": 5,
+        "Option": "Strongly Agree",
+        "Point": 5
+      }
+    ]
+  },
+  {
+    "Number": 4,
+    "Question": "I have recurrent thoughts about ending my life",
+    "Options": [
+      {
+        "Number": 1,
+        "Option": "Strongly Disagree",
+        "Point": 1
+      },
+      {
+        "Number": 2,
+        "Option": "Disagree",
+        "Point": 2
+      },
+      {
+        "Number": 3,
+        "Option": "Neutral",
+        "Point": 3
+      },
+      {
+        "Number": 4,
+        "Option": "Agree",
+        "Point": 4
+      },
+      {
+        "Number": 5,
+        "Option": "Strongly Agree",
+        "Point": 5
+      }
+    ]
+  },
+  {
+    "Number": 5,
+    "Question": "Even when forces beyond my control prevent me from reaching a goal, I still find a way to blame myself",
+    "Options": [
+      {
+        "Number": 1,
+        "Option": "Strongly Disagree",
+        "Point": 1
+      },
+      {
+        "Number": 2,
+        "Option": "Disagree",
+        "Point": 2
+      },
+      {
+        "Number": 3,
+        "Option": "Neutral",
+        "Point": 3
+      },
+      {
+        "Number": 4,
+        "Option": "Agree",
+        "Point": 4
+      },
+      {
+        "Number": 5,
+        "Option": "Strongly Agree",
+        "Point": 5
+      }
+    ]
+  },
+  {
+    "Number": 6,
+    "Question": "I keep myself up at night thinking about the things going on in my life",
+    "Options": [
+      {
+        "Number": 1,
+        "Option": "Strongly Disagree",
+        "Point": 1
+      },
+      {
+        "Number": 2,
+        "Option": "Disagree",
+        "Point": 2
+      },
+      {
+        "Number": 3,
+        "Option": "Neutral",
+        "Point": 3
+      },
+      {
+        "Number": 4,
+        "Option": "Agree",
+        "Point": 4
+      },
+      {
+        "Number": 5,
+        "Option": "Strongly Agree",
+        "Point": 5
+      }
+    ]
+  },
+  {
+    "Number": 7,
+    "Question": "If I am struggling in work or in school, I tend to think it is because I am not smart enough",
+    "Options": [
+      {
+        "Number": 1,
+        "Option": "Strongly Disagree",
+        "Point": 1
+      },
+      {
+        "Number": 2,
+        "Option": "Disagree",
+        "Point": 2
+      },
+      {
+        "Number": 3,
+        "Option": "Neutral",
+        "Point": 3
+      },
+      {
+        "Number": 4,
+        "Option": "Agree",
+        "Point": 4
+      },
+      {
+        "Number": 5,
+        "Option": "Strongly Agree",
+        "Point": 5
+      }
+    ]
+  },
+  {
+    "Number": 8,
+    "Question": "I feel like crying for no apparent reason",
+    "Options": [
+      {
+        "Number": 1,
+        "Option": "Strongly Disagree",
+        "Point": 1
+      },
+      {
+        "Number": 2,
+        "Option": "Disagree",
+        "Point": 2
+      },
+      {
+        "Number": 3,
+        "Option": "Neutral",
+        "Point": 3
+      },
+      {
+        "Number": 4,
+        "Option": "Agree",
+        "Point": 4
+      },
+      {
+        "Number": 5,
+        "Option": "Strongly Agree",
+        "Point": 5
+      }
+    ]
+  },
+  {
+    "Number": 9,
+    "Question": "I feel I don't deserve to be loved",
+    "Options": [
+      {
+        "Number": 1,
+        "Option": "Strongly Disagree",
+        "Point": 1
+      },
+      {
+        "Number": 2,
+        "Option": "Disagree",
+        "Point": 2
+      },
+      {
+        "Number": 3,
+        "Option": "Neutral",
+        "Point": 3
+      },
+      {
+        "Number": 4,
+        "Option": "Agree",
+        "Point": 4
+      },
+      {
+        "Number": 5,
+        "Option": "Strongly Agree",
+        "Point": 5
+      }
+    ]
+  },
+  {
+    "Number": 10,
+    "Question": "I feel physically weak",
+    "Options": [
+      {
+        "Number": 1,
+        "Option": "Strongly Disagree",
+        "Point": 1
+      },
+      {
+        "Number": 2,
+        "Option": "Disagree",
+        "Point": 2
+      },
+      {
+        "Number": 3,
+        "Option": "Neutral",
+        "Point": 3
+      },
+      {
+        "Number": 4,
+        "Option": "Agree",
+        "Point": 4
+      },
+      {
+        "Number": 5,
+        "Option": "Strongly Agree",
+        "Point": 5
+      }
+    ]
+  }
+]

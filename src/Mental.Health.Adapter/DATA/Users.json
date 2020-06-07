@@ -1,0 +1,15 @@
+[
+  {
+    "EmailID": "abc123@gmail.com",
+    "UserId": "DIPIKA",
+    "UserName": "Dipika Mandal",
+    "Age": 23,
+    "Gender": 2,
+    "PhoneNumber": 8777432785,
+    "Country": "India",
+    "Pincode": 732139,
+    "Password": "DIP@123",
+    "ConnectWithOthers": false,
+    "AnalyzedValue": "1.1.2.3"
+  }
+]
