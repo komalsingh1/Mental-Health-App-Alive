@@ -4,9 +4,6 @@ A solution for all the Mental Illness
 UI Code in branch Mental-Health-UI
 API Code in branch Mental-Health-API
 
-# Mental-Health-App-Alive
-A solution for all the Mental Illness
-
 
 # Submission name
 Team Name: SheCoders
@@ -21,11 +18,8 @@ Team Name: SheCoders
 1. [Running the tests](#running-the-tests)
 1. [Live demo](#live-demo)
 1. [Built with](#built-with)
-1. [Contributing](#contributing)
-1. [Versioning](#versioning)
-1. [Authors](#authors)
-1. [License](#license)
-1. [Acknowledgments](#acknowledgments)
+1. [Contributors](#Contributors)
+1. [Contributors](#authors)
 
 ## Short description
 
@@ -60,7 +54,6 @@ Chatbot Architecture
 Stress Management Architecture
 
 ![Video transcription/translation app](https://github.com/komalsingh1/Mental-Health-App-Alive/blob/master/stress.png)
-
 
 
 ## Long description
@@ -151,8 +144,8 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-[Dipika Mandal](https://github.com/dipika732139)
-[Prity Agarwal](https://github.com/prity)
-[Sakshi Tripathi](https://github.com/skshtripathi)
-[Komal Singh](https://github.com/komalsingh1)
+1.[Dipika Mandal](https://github.com/dipika732139)
+1.[Prity Agarwal](https://github.com/prity)
+1.[Sakshi Tripathi](https://github.com/skshtripathi)
+1.[Komal Singh](https://github.com/komalsingh1)
 
